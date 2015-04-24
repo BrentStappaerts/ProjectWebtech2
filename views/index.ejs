@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Live Q&A</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<style>
+		body{
+			background-color: #AFEEEE;
+		}
+		h2{
+			color: black;
+		}
+		#container{
+			background-color: #1E90FF;
+			width: 400px;
+			height: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			text-align: center;
+			padding-top: 50px;
+		}
+
+	</style>
+</head>
+<body>
+<% if (!user) { %>
+<div id="container">
+	<h2>LIVE Q&A</h2>
+	<p>Live vragen stellen </p>
+	<a href="/auth/facebook"><img src="fb-login.jpg" width="151" height="24"></a>
+</div>
+<% } else { %>
+	<h2>Hello, <%= user.username %>.</h2>
+<% } %>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
